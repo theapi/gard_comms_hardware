@@ -1,0 +1,126 @@
+Configuration	blinky
+STM32CubeMX 	5.0.0
+Date	11/20/2018
+MCU	STM32L053C8Tx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC	IN7	ADC_IN7	PA7
+ADC	IN8	ADC_IN8	PB0
+ADC	IN9	ADC_IN9	PB1
+ADC	Single-ended	ADC_TempSens_Input	VP_ADC_TempSens_Input
+I2C1	I2C	I2C1_SCL	PB6
+I2C1	I2C	I2C1_SDA	PB7
+RTC	Activate RTC Clock Source	RTC_VS_RTC_Activate	VP_RTC_VS_RTC_Activate
+RTC	RTC Enabled	RTC_VS_RTC_Calendar	VP_RTC_VS_RTC_Calendar
+RTC	Internal WakeUp	RTC_VS_RTC_WakeUp_intern	VP_RTC_VS_RTC_WakeUp_intern
+SPI2	Full-Duplex Master	SPI2_MISO	PB14
+SPI2	Full-Duplex Master	SPI2_MOSI	PB15
+SPI2	Full-Duplex Master	SPI2_SCK	PB13
+SYS	Serial_Wire	SYS_SWCLK	PA14
+SYS	Serial_Wire	SYS_SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+USART1	Asynchronous	USART1_RX	PA10
+USART1	Asynchronous	USART1_TX	PA9
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+12	PA2	GPIO_Output	
+13	PA3	GPIO_Output	
+14	PA4	GPIO_Output	
+15	PA5	GPIO_Output	LED
+17	PA7	ADC_IN7	
+18	PB0	ADC_IN8	
+19	PB1	ADC_IN9	
+21	PB10	GPIO_Analog	DIO5
+25	PB12	GPIO_Output	SPI2_CS
+26	PB13	SPI2_SCK	
+27	PB14	SPI2_MISO	
+28	PB15	SPI2_MOSI	
+30	PA9	USART1_TX	
+31	PA10	USART1_RX	
+34	PA13	SYS_SWDIO	
+37	PA14	SYS_SWCLK	
+38	PA15	GPIO_Analog	DIO3
+39	PB3	GPIO_Analog	DIO4
+40	PB4	GPIO_EXTI4	DIO0
+41	PB5	GPIO_Analog	DIO1
+42	PB6	I2C1_SCL	
+43	PB7	I2C1_SDA	
+45	PB8	GPIO_Analog	DI02
+46	PB9	GPIO_EXTI9	ADC_RDY
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC	IN7	ADC_IN7	PA7
+ADC	IN8	ADC_IN8	PB0
+ADC	IN9	ADC_IN9	PB1
+ADC	Single-ended	ADC_TempSens_Input	VP_ADC_TempSens_Input
+I2C1	I2C	I2C1_SCL	PB6
+I2C1	I2C	I2C1_SDA	PB7
+RTC	Activate RTC Clock Source	RTC_VS_RTC_Activate	VP_RTC_VS_RTC_Activate
+RTC	RTC Enabled	RTC_VS_RTC_Calendar	VP_RTC_VS_RTC_Calendar
+RTC	Internal WakeUp	RTC_VS_RTC_WakeUp_intern	VP_RTC_VS_RTC_WakeUp_intern
+SPI2	Full-Duplex Master	SPI2_MISO	PB14
+SPI2	Full-Duplex Master	SPI2_MOSI	PB15
+SPI2	Full-Duplex Master	SPI2_SCK	PB13
+SYS	Serial_Wire	SYS_SWCLK	PA14
+SYS	Serial_Wire	SYS_SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+USART1	Asynchronous	USART1_RX	PA10
+USART1	Asynchronous	USART1_TX	PA9
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+12	PA2	GPIO_Output	
+13	PA3	GPIO_Output	
+14	PA4	GPIO_Output	
+15	PA5	GPIO_Output	LED
+17	PA7	ADC_IN7	
+18	PB0	ADC_IN8	
+19	PB1	ADC_IN9	
+21	PB10	GPIO_Analog	DIO5
+25	PB12	GPIO_Output	SPI2_CS
+26	PB13	SPI2_SCK	
+27	PB14	SPI2_MISO	
+28	PB15	SPI2_MOSI	
+30	PA9	USART1_TX	
+31	PA10	USART1_RX	
+34	PA13	SYS_SWDIO	
+37	PA14	SYS_SWCLK	
+38	PA15	GPIO_Analog	DIO3
+39	PB3	GPIO_Analog	DIO4
+40	PB4	GPIO_EXTI4	DIO0
+41	PB5	GPIO_Analog	DIO1
+42	PB6	I2C1_SCL	
+43	PB7	I2C1_SDA	
+45	PB8	GPIO_Analog	DI02
+46	PB9	GPIO_EXTI9	ADC_RDY
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : blinky
+Project Folder : /home/peter/repos/gard_comms_hardware/stm32/blinky
+Toolchain / IDE : SW4STM32
+Firmware Package Name and Version : STM32Cube FW_L0 V1.11.0
+
+
+Code Generation Settings : 
+STM32Cube Firmware Library Package : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : Yes
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+

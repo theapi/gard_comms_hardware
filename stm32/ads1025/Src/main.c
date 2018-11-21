@@ -50,6 +50,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "string.h"
 #include "battery.h"
 
 /* USER CODE END Includes */
@@ -75,6 +76,9 @@
 
   uint16_t batt;
   int16_t ma;
+
+#define TXBUFFERSIZE 32
+volatile uint8_t txBuffer[TXBUFFERSIZE];
 
 /* USER CODE END PV */
 
@@ -142,11 +146,18 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 
-
 	  HAL_GPIO_TogglePin(GPIOA, LED_Pin);
 
 	  batt = BATTERY_vcc();
 	  ma = BATTERY_ChargeMa();
+
+	  sprintf(
+	    txBuffer,
+		"\nbatt:%d, ma:%d\n",
+		batt,
+		ma
+	  );
+	  HAL_UART_Transmit_IT(&huart2, (uint8_t *)txBuffer, TXBUFFERSIZE);
 
 	  HAL_Delay(500);
 
@@ -218,6 +229,12 @@ static void MX_NVIC_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+
+}
+
 
 /* USER CODE END 4 */
 

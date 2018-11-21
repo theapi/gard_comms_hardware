@@ -132,10 +132,10 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  HAL_GPIO_TogglePin(GPIOA, LED_Pin);
-	  HAL_Delay(500);
 
     /* USER CODE BEGIN 3 */
+	  HAL_GPIO_TogglePin(GPIOA, LED_Pin);
+	  HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }

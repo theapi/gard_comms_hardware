@@ -317,31 +317,8 @@ Text Notes 1125 4000 0    98   ~ 20
 ADC
 Text Notes 1125 2525 0    98   ~ 20
 Programming Header
-$Comp
-L AP2112 U1
-U 1 1 592F19AA
-P 4475 1400
-F 0 "U1" H 4225 1650 50  0000 L CNN
-F 1 "AP2112" H 4525 1650 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-5_HandSoldering" H 4425 1350 50  0001 C CNN
-F 3 "" H 3575 1800 50  0001 C CNN
-	1    4475 1400
-	1    0    0    -1  
-$EndComp
 Text Notes 1175 900  0    98   ~ 20
-Power
-NoConn ~ 4875 1550
-$Comp
-L Earth #PWR012
-U 1 1 592F1C89
-P 4475 1850
-F 0 "#PWR012" H 4475 1600 50  0001 C CNN
-F 1 "Earth" H 4475 1700 50  0001 C CNN
-F 2 "" H 4475 1850 50  0000 C CNN
-F 3 "" H 4475 1850 50  0000 C CNN
-	1    4475 1850
-	1    0    0    -1  
-$EndComp
+ADC Inputs
 Text GLabel 9575 3150 2    60   Input ~ 0
 I2C1_SDA
 Text GLabel 9575 3050 2    60   Input ~ 0
@@ -369,12 +346,12 @@ RFM_RST
 $Comp
 L +3.3V #PWR013
 U 1 1 592F43A5
-P 5175 1100
-F 0 "#PWR013" H 5175 950 50  0001 C CNN
-F 1 "+3.3V" H 5175 1240 50  0000 C CNN
-F 2 "" H 5175 1100 50  0001 C CNN
-F 3 "" H 5175 1100 50  0001 C CNN
-	1    5175 1100
+P 6325 1600
+F 0 "#PWR013" H 6325 1450 50  0001 C CNN
+F 1 "+3.3V" H 6325 1740 50  0000 C CNN
+F 2 "" H 6325 1600 50  0001 C CNN
+F 3 "" H 6325 1600 50  0001 C CNN
+	1    6325 1600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -518,30 +495,6 @@ Text GLabel 4125 4975 2    60   Input ~ 0
 ADC_RDY
 Text GLabel 9575 3350 2    60   Input ~ 0
 ADC_RDY
-Text Notes 3875 1050 0    59   ~ 0
-Max 6v
-$Comp
-L C C5
-U 1 1 59302470
-P 3850 1550
-F 0 "C5" H 3875 1650 50  0000 L CNN
-F 1 "1uf" H 3875 1450 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3888 1400 50  0001 C CNN
-F 3 "" H 3850 1550 50  0001 C CNN
-	1    3850 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C6
-U 1 1 5930294B
-P 5175 1550
-F 0 "C6" H 5200 1650 50  0000 L CNN
-F 1 "1uf" H 5200 1450 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5213 1400 50  0001 C CNN
-F 3 "" H 5175 1550 50  0001 C CNN
-	1    5175 1550
-	1    0    0    -1  
-$EndComp
 $Comp
 L C C7
 U 1 1 5930245B
@@ -586,61 +539,17 @@ F 3 "" H 3650 4175 50  0001 C CNN
 	1    3650 4175
 	1    0    0    -1  
 $EndComp
-$Comp
-L Earth #PWR027
-U 1 1 59316863
-P 3425 1600
-F 0 "#PWR027" H 3425 1350 50  0001 C CNN
-F 1 "Earth" H 3425 1450 50  0001 C CNN
-F 2 "" H 3425 1600 50  0000 C CNN
-F 3 "" H 3425 1600 50  0000 C CNN
-	1    3425 1600
-	1    0    0    -1  
-$EndComp
 Text Notes 3175 2525 0    98   ~ 20
 Debug
 $Comp
-L Battery BT1
-U 1 1 59319095
-P 3425 1400
-F 0 "BT1" H 3525 1500 50  0000 L CNN
-F 1 "Battery" H 3525 1400 50  0000 L CNN
-F 2 "theapi:BatteryBoxAndPins" V 3425 1460 50  0001 C CNN
-F 3 "" V 3425 1460 50  0001 C CNN
-	1    3425 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Solar_Cells SC1
-U 1 1 59328B1A
-P 2000 1200
-F 0 "SC1" V 2125 1125 50  0000 L CNN
-F 1 "Solar_Cells" V 1850 775 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 2000 1260 50  0001 C CNN
-F 3 "" V 2000 1260 50  0001 C CNN
-	1    2000 1200
-	0    1    1    0   
-$EndComp
-$Comp
-L D_Schottky D2
-U 1 1 59328B99
-P 2700 1200
-F 0 "D2" H 2700 1300 50  0000 C CNN
-F 1 "D_Schottky" H 2700 1100 50  0000 C CNN
-F 2 "theapi:D_SOD-323_HandSoldering" H 2700 1200 50  0001 C CNN
-F 3 "" H 2700 1200 50  0001 C CNN
-	1    2700 1200
-	-1   0    0    1   
-$EndComp
-$Comp
 L Earth #PWR028
 U 1 1 593290F6
-P 1550 1850
-F 0 "#PWR028" H 1550 1600 50  0001 C CNN
-F 1 "Earth" H 1550 1700 50  0001 C CNN
-F 2 "" H 1550 1850 50  0000 C CNN
-F 3 "" H 1550 1850 50  0000 C CNN
-	1    1550 1850
+P 6325 1900
+F 0 "#PWR028" H 6325 1650 50  0001 C CNN
+F 1 "Earth" H 6325 1750 50  0001 C CNN
+F 2 "" H 6325 1900 50  0000 C CNN
+F 3 "" H 6325 1900 50  0000 C CNN
+	1    6325 1900
 	1    0    0    -1  
 $EndComp
 Text GLabel 9575 3550 2    60   Input ~ 0
@@ -674,72 +583,72 @@ $EndComp
 $Comp
 L R R6
 U 1 1 59354FC1
-P 2275 1550
-F 0 "R6" V 2355 1550 50  0000 C CNN
-F 1 "300K" V 2275 1550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2205 1550 50  0001 C CNN
-F 3 "" H 2275 1550 50  0001 C CNN
-	1    2275 1550
-	0    1    1    0   
+P 4225 1350
+F 0 "R6" V 4305 1350 50  0000 C CNN
+F 1 "300K" V 4225 1350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4155 1350 50  0001 C CNN
+F 3 "" H 4225 1350 50  0001 C CNN
+	1    4225 1350
+	0    -1   1    0   
 $EndComp
 $Comp
 L R R7
 U 1 1 593551BF
-P 2075 1750
-F 0 "R7" V 2155 1750 50  0000 C CNN
-F 1 "100K" V 2075 1750 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2005 1750 50  0001 C CNN
-F 3 "" H 2075 1750 50  0001 C CNN
-	1    2075 1750
-	1    0    0    -1  
+P 4425 1550
+F 0 "R7" V 4505 1550 50  0000 C CNN
+F 1 "100K" V 4425 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4355 1550 50  0001 C CNN
+F 3 "" H 4425 1550 50  0001 C CNN
+	1    4425 1550
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Earth #PWR029
 U 1 1 59355822
-P 2075 1900
-F 0 "#PWR029" H 2075 1650 50  0001 C CNN
-F 1 "Earth" H 2075 1750 50  0001 C CNN
-F 2 "" H 2075 1900 50  0000 C CNN
-F 3 "" H 2075 1900 50  0000 C CNN
-	1    2075 1900
-	1    0    0    -1  
+P 4425 1700
+F 0 "#PWR029" H 4425 1450 50  0001 C CNN
+F 1 "Earth" H 4425 1550 50  0001 C CNN
+F 2 "" H 4425 1700 50  0000 C CNN
+F 3 "" H 4425 1700 50  0000 C CNN
+	1    4425 1700
+	-1   0    0    -1  
 $EndComp
-Text Label 1825 1550 0    60   ~ 0
+Text Label 4675 1350 2    60   ~ 0
 AIN2
 Text Label 1500 5075 0    60   ~ 0
 AIN2
 $Comp
 L R R9
 U 1 1 59356DA1
-P 2800 1750
-F 0 "R9" V 2880 1750 50  0000 C CNN
-F 1 "100K" V 2800 1750 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2730 1750 50  0001 C CNN
-F 3 "" H 2800 1750 50  0001 C CNN
-	1    2800 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R8
-U 1 1 59356E2E
 P 3000 1550
-F 0 "R8" V 3080 1550 50  0000 C CNN
+F 0 "R9" V 3080 1550 50  0000 C CNN
 F 1 "100K" V 3000 1550 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 2930 1550 50  0001 C CNN
 F 3 "" H 3000 1550 50  0001 C CNN
 	1    3000 1550
-	0    1    1    0   
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 59356E2E
+P 2800 1350
+F 0 "R8" V 2880 1350 50  0000 C CNN
+F 1 "300K" V 2800 1350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2730 1350 50  0001 C CNN
+F 3 "" H 2800 1350 50  0001 C CNN
+	1    2800 1350
+	0    -1   1    0   
 $EndComp
 $Comp
 L Earth #PWR030
 U 1 1 59357323
-P 2800 1900
-F 0 "#PWR030" H 2800 1650 50  0001 C CNN
-F 1 "Earth" H 2800 1750 50  0001 C CNN
-F 2 "" H 2800 1900 50  0000 C CNN
-F 3 "" H 2800 1900 50  0000 C CNN
-	1    2800 1900
-	-1   0    0    -1  
+P 3000 1700
+F 0 "#PWR030" H 3000 1450 50  0001 C CNN
+F 1 "Earth" H 3000 1550 50  0001 C CNN
+F 2 "" H 3000 1700 50  0000 C CNN
+F 3 "" H 3000 1700 50  0000 C CNN
+	1    3000 1700
+	1    0    0    -1  
 $EndComp
 Text Label 7400 1600 1    60   ~ 0
 24
@@ -788,13 +697,13 @@ AIN3
 $Comp
 L R_Shunt R5
 U 1 1 593784A2
-P 1550 1650
-F 0 "R5" V 1375 1650 50  0000 C CNN
-F 1 "R_Shunt" V 1450 1650 50  0000 C CNN
-F 2 "theapi:SHUNT_1210_HandSoldering" V 1480 1650 50  0001 C CNN
-F 3 "" H 1550 1650 50  0001 C CNN
-	1    1550 1650
-	-1   0    0    -1  
+P 1400 1575
+F 0 "R5" V 1225 1575 50  0000 C CNN
+F 1 "R_Shunt" V 1300 1575 50  0000 C CNN
+F 2 "theapi:SHUNT_1210_HandSoldering" V 1330 1575 50  0001 C CNN
+F 3 "" H 1400 1575 50  0001 C CNN
+	1    1400 1575
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	8175 5800 8175 5950
@@ -851,32 +760,11 @@ Wire Wire Line
 Wire Wire Line
 	3150 4975 4125 4975
 Wire Wire Line
-	4475 1800 4475 1850
-Wire Wire Line
-	3850 1850 5475 1850
-Wire Wire Line
-	3850 1850 3850 1700
-Wire Wire Line
-	4875 1400 5475 1400
-Wire Wire Line
-	5175 1400 5175 1100
-Wire Wire Line
-	5175 1850 5175 1700
-Connection ~ 4475 1850
-Wire Wire Line
-	4075 1400 3850 1400
-Wire Wire Line
-	4075 1550 4075 1400
-Wire Wire Line
 	2450 4175 3250 4175
 Wire Wire Line
 	2450 4175 2450 4475
 Wire Wire Line
 	3650 4275 3650 4175
-Wire Wire Line
-	2850 1200 3850 1200
-Wire Wire Line
-	3850 1200 3850 1400
 Wire Notes Line
 	3075 2275 3075 3675
 Wire Notes Line
@@ -921,7 +809,6 @@ Wire Wire Line
 	1475 4775 1750 4775
 Wire Wire Line
 	1475 4875 1750 4875
-Connection ~ 3425 1200
 Wire Wire Line
 	2050 6600 2050 6425
 Wire Wire Line
@@ -931,10 +818,10 @@ Wire Wire Line
 Wire Wire Line
 	1300 6425 1375 6425
 Wire Wire Line
-	2075 1600 2075 1550
+	4425 1400 4425 1350
 Wire Wire Line
-	1825 1550 2125 1550
-Connection ~ 2075 1550
+	4675 1350 4375 1350
+Connection ~ 4425 1350
 Wire Wire Line
 	1500 5075 1750 5075
 Wire Wire Line
@@ -1143,18 +1030,14 @@ $EndComp
 $Comp
 L C C9
 U 1 1 59466076
-P 5475 1550
-F 0 "C9" H 5500 1650 50  0000 L CNN
-F 1 "10uF" H 5500 1450 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5513 1400 50  0001 C CNN
-F 3 "" H 5475 1550 50  0000 C CNN
-	1    5475 1550
+P 6325 1750
+F 0 "C9" H 6350 1850 50  0000 L CNN
+F 1 "10uF" H 6350 1650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6363 1600 50  0001 C CNN
+F 3 "" H 6325 1750 50  0000 C CNN
+	1    6325 1750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5475 1850 5475 1700
-Connection ~ 5175 1850
-Connection ~ 5175 1400
 $Comp
 L R R10
 U 1 1 59492AEA
@@ -1208,32 +1091,24 @@ F 3 "" H 6075 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2550 1550 2850 1550
+	3250 1350 2950 1350
 Wire Wire Line
-	2800 1550 2800 1600
-Text Label 2550 1550 0    60   ~ 0
+	3000 1350 3000 1400
+Text Label 3250 1350 2    60   ~ 0
 AIN3
-Connection ~ 2800 1550
-Connection ~ 3150 1200
-Text Label 1100 1550 0    60   ~ 0
+Connection ~ 3000 1350
+Text Label 1850 1475 2    60   ~ 0
 AIN0
-Text Label 1100 1750 0    60   ~ 0
+Text Label 1850 1675 2    60   ~ 0
 AIN1
 Wire Wire Line
-	1800 1200 1550 1200
+	1150 1125 1400 1125
 Wire Wire Line
-	1550 1200 1550 1450
+	1400 1125 1400 1375
 Wire Wire Line
-	1400 1550 1100 1550
+	1550 1475 1850 1475
 Wire Wire Line
-	1400 1750 1100 1750
-Wire Wire Line
-	3150 1200 3150 1550
-Wire Wire Line
-	2200 1200 2550 1200
-Wire Wire Line
-	2425 1550 2425 1200
-Connection ~ 2425 1200
+	1550 1675 1850 1675
 Text GLabel 6100 6200 2    60   Input ~ 0
 I2C1_SCL
 Text GLabel 6100 6300 2    60   Input ~ 0
@@ -1275,7 +1150,7 @@ Wire Wire Line
 	6100 6000 6300 6000
 Wire Wire Line
 	6100 6100 6750 6100
-Text Label 3150 1200 0    60   ~ 0
+Text Label 2350 1350 0    60   ~ 0
 BATT
 NoConn ~ 7625 2550
 NoConn ~ 9575 4550
@@ -1301,4 +1176,18 @@ F 3 "" H 6375 2750 50  0001 C CNN
 	1    6375 2750
 	1    0    0    -1  
 $EndComp
+Text Label 1150 1125 0    60   ~ 0
+SOL+
+Wire Wire Line
+	1400 1775 1400 1975
+Wire Wire Line
+	1400 1975 1150 1975
+Text Label 1150 1975 0    60   ~ 0
+SOL-
+Wire Wire Line
+	2650 1350 2350 1350
+Wire Wire Line
+	4075 1350 3850 1350
+Text Label 3850 1350 0    60   ~ 0
+SOL+
 $EndSCHEMATC

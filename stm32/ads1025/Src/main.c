@@ -50,7 +50,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "string.h"
+#include "stdio.h"
 #include "battery.h"
 
 /* USER CODE END Includes */
@@ -78,7 +78,7 @@
   int16_t ma;
 
 #define TXBUFFERSIZE 32
-volatile uint8_t txBuffer[TXBUFFERSIZE];
+char tx_buffer[TXBUFFERSIZE];
 
 /* USER CODE END PV */
 
@@ -151,13 +151,14 @@ int main(void)
 	  batt = BATTERY_vcc();
 	  ma = BATTERY_ChargeMa();
 
-	  sprintf(
-	    txBuffer,
-		"\nbatt:%d, ma:%d\n",
+	  int tx_len = snprintf(
+	    tx_buffer,
+		TXBUFFERSIZE,
+		"batt:%d, ma:%d\n",
 		batt,
 		ma
 	  );
-	  HAL_UART_Transmit_IT(&huart2, (uint8_t *)txBuffer, TXBUFFERSIZE);
+	  HAL_UART_Transmit_IT(&huart2, (uint8_t *)tx_buffer, tx_len);
 
 	  HAL_Delay(500);
 

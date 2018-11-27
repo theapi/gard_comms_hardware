@@ -40,9 +40,18 @@ uint16_t BATTERY_ChargeMv() {
 }
 
 int16_t BATTERY_ChargeMa() {
-    int16_t val = ADS1015_Differential_0_1(&hi2c1, ADS1015_ADDRESS, ADS1015_GAIN_TWO);
-    /*
-     * Invert as its a negative value referenced to ground when charging.
-     */
-    return val *-1;
+	/*
+	 * 16x gain
+	 * 384 = 500mA = 1.302083333 mA per bit
+	 * 308 * 1.302083333 = 401.041666564 -  actual 400mA
+	 * 458 * 1.302083333 = 596.354166514 - actual 600mA
+	 *
+	 * 2x gain:
+	 * 48 = 500mA = 10.416666667 mA per bit
+	 * 38 * 10.416666667 mA = 395.833333346 mA - actual 400mA
+	 * 57 * 10.416666667 mA = 593.750000019 mA - actual 600mA
+	 */
+    int16_t val = ADS1015_Differential_0_1(&hi2c1, ADS1015_ADDRESS, ADS1015_GAIN_SIXTEEN);
+
+    return val;
 }
